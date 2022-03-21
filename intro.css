@@ -8,7 +8,7 @@
 /* overflow: hidden 어트리뷰트를 적용해서 스크롤이 밑으로 내려가지 않게 함 */
 body{
     font-size: 50px;
-    background: rgba(173, 139, 115, 0.7);
+    background:rgb(255, 230, 167);
     font-family: 'Dongle', sans-serif;
     overflow: hidden;
 }
