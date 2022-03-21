@@ -35,15 +35,16 @@ nav a{
     text-align: center;
     padding-top: 60px;
     transition:all ease-in .5s;
-    border: 2px solid rgb(60, 44, 33);
+    border: 2px solid rgba(109, 84, 65, 0.3);
 }
 
 nav a:hover{
     background:rgba(109, 84, 65, 1.0);
 }
 
-/* nav의 자식요소 a 중에 n+1(1번쨰 제외 모든 자식요소) border 지움(겹쳐있기 때문에). */
-nav a:nth-child(n+1){
+/* nav의 자식요소 border 지움(겹쳐있기 때문에). */
+nav a:nth-child(n){
+    border-left: none;
     border-bottom: none;
 }
 /* 위와같은 이유로 border 지움 */
@@ -90,6 +91,7 @@ section:target {
     z-index: 10;
 }
 /* target일 시 안보이게 감춰두었던 것들을 모두 보이게 함 */
+
 /* animation 속성으로 50%만 적용하여 나타났다가 사라지게 함 */
 section:target h1 {
     opacity: 0;
