@@ -67,6 +67,9 @@ section img{
     border-radius: 50%;
     display: inline-block;
 }
+section article p{
+    opacity: 0;
+}
 
 section:target {
     opacity: 1;
