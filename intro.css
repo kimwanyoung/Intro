@@ -145,7 +145,7 @@ section article > p{
 }
 
 .out_scene{
-    color: white;
+    color: black;
     text-align: center;
     font-family: 'Roboto Mono', monospace;
     position: absolute;
@@ -153,13 +153,16 @@ section article > p{
     transform: translateX(-50%) translateY(-50%);
     top: 47%;
     left: 53%;
-    text-shadow: 5px 5px 3px black;
+}
+
+.out_scene h1{
+    font-size: 50px;
 }
 /* 왜 not target을 해야 애니메이션이 적용되는지 모르겠음
    그리고 not target이면 다른 섹션 넘어갈 때 실행되야 하는거 아닌가? */
 .out_scene:not(:target){
     opacity: 0;
-    animation: 2s fadeIn forwards .5s;
+    animation: 2s fadeIn backwards .5s;
 }
 
 #home {
