@@ -76,6 +76,7 @@ section img{
     height: 300px;
     border-radius: 50%;
     display: inline-block;
+    position: relative;
 }
 /* target이 아닐시 visibility:hidden 어트리뷰트를 적용해서 target에서 빠져나왔을시 매끄럽게 사라지게 함 */
 section article{
@@ -95,12 +96,12 @@ section:target {
 /* animation 속성으로 50%만 적용하여 나타났다가 사라지게 함 */
 section:target h1 {
     opacity: 0;
-    animation: 2s fadeIn forwards .5s;
+    animation: 1s fadeIn forwards .5s;
 }
 /* animation 속성으로 100% 적용하여 나타나게 함 */
 section:target *{
     opacity: 0;
-    animation: 1s deepfadeIn forwards 2.5s;
+    animation: 1s deepfadeIn forwards 1.5s;
 }
 
 section article > span{
@@ -150,18 +151,19 @@ section article > p{
     position: absolute;
     display: inline-block;
     transform: translateX(-50%) translateY(-50%);
-    top: 50%;
-    left: 55%;
-    max-width: 70%;
+    top: 47%;
+    left: 53%;
+    text-shadow: 5px 5px 3px black;
 }
-/* 첫 화면은 타겟이 아니기 때문에 not을 이용해 나타나게 함 */
+/* 왜 not target을 해야 애니메이션이 적용되는지 모르겠음
+   그리고 not target이면 다른 섹션 넘어갈 때 실행되야 하는거 아닌가? */
 .out_scene:not(:target){
     opacity: 0;
     animation: 2s fadeIn forwards .5s;
 }
 
 #home {
-  background:#FFDEDE;
+    background:#FFDEDE;
 }
 #birth {
     background:#FDF5CA;
